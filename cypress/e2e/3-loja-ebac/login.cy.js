@@ -41,12 +41,17 @@ describe ('Funcionalidade: Login', () => {
         cy.get('.woocommerce-MyAccount-content > :nth-child(3)').should('contain', 'você pode ver suas compras recentes')
     });
 
-    it.only('Deve fazer login com sucesso usando Fixture', () => {
+    it('Deve fazer login com sucesso usando Fixture', () => {
         cy.fixture('perfil').then(dados => {
             cy.get('#username').type(dados.usuario)
             cy.get('#password').type(dados.senha, {log: false})
             cy.get('.woocommerce-form > .button').click()
             cy.get('.woocommerce-MyAccount-content > :nth-child(3)').should('contain', 'você pode ver suas compras recentes')
         })
+    });
+
+    it('Deve fazer login com sucesso usando comandos customizados', () => {
+        cy.login('talita.teste@teste.com', 'senha123')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(3)').should('contain', 'você pode ver suas compras recentes')
     });
 })
