@@ -29,7 +29,7 @@ _Nessa etapa tive dificuldade com a configuração de inicialização do Cypress
 
 ### Aula 2
 
-#### Primeiro teste automatizado no [e-commerce de teste da EBAC] (https://lojaebac.ebaconline.art.br)
+#### Primeiro teste automatizado no [e-commerce de teste da EBAC](https://lojaebac.ebaconline.art.br)
 
 Cenário de teste positivo: login com massa de dados fixa
 
