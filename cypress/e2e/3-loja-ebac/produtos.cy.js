@@ -1,9 +1,10 @@
 /// <reference types ="cypress"/>
+import produtosPage from "../../support/page-objects/produtos.page";
 
 describe('funcionalidade: Produtos', () => {
 
     beforeEach(() => {
-        cy.visit('/produtos/')
+        produtosPage.visitarUrl()
     });
 
     it('Deve selecionar o quarto produto da lista usando o bloco de produto', () => {
@@ -24,5 +25,16 @@ describe('funcionalidade: Produtos', () => {
     it('Deve selecionar um produto pelo seu nome', () => {
         cy.get('.products > .row').contains('Ariel Roll Sleeve Sweatshirt').click()
         cy.get('.sku_wrapper').should('contain', 'SKU: WH09')
+    });
+
+    it('Deve selecionar um produto da lista - Page Ojects', () => {
+        produtosPage.buscarProdutoLista('Aether Gym Pant')
+        cy.get('#tbay-main-content').should('contain', 'Descrição')
+    });
+
+    it.only('Deve buscar um produto com sucesso - Page Ojects', () => {
+        let produto = 'Erica Evercool Sports Bra'
+        produtosPage.buscarProduto(produto)
+        cy.get('.product_title').should('contain', produto)
     });
 });
