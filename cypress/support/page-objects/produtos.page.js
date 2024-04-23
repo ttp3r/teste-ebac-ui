@@ -13,8 +13,10 @@ class Produtospage {
         cy.get('.products > .row').contains(nomeProduto).click()
     }
 
-    visitarProduto() {
-
+    visitarProduto(nomeProduto) {
+        //cy.visit(`/produtos/${nomeProduto}`)
+        const urlFormatada = nomeProduto.replace(/ /g, '-')
+        cy.visit(`produtos/${urlFormatada}`)
     }
 
     addProdutoCarrinho() {

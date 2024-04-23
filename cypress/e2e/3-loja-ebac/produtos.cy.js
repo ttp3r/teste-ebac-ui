@@ -32,9 +32,14 @@ describe('funcionalidade: Produtos', () => {
         cy.get('#tbay-main-content').should('contain', 'Descrição')
     });
 
-    it.only('Deve buscar um produto com sucesso - Page Ojects', () => {
+    it('Deve buscar um produto com sucesso - Page Ojects', () => {
         let produto = 'Erica Evercool Sports Bra'
         produtosPage.buscarProduto(produto)
         cy.get('.product_title').should('contain', produto)
+    });
+
+    it.only('Deve visitar a página do produto pela url- Page Objects', () => {
+        produtosPage.visitarProduto('Abominable Hoodie')
+        cy.get('.product_title').should('contain', 'Abominable Hoodie')
     });
 });
