@@ -22,7 +22,7 @@
 	* Comando npm init -y para criar o arquivo package.jason
 	* Comando npm install cypress@13.6.0
 	* Comando npx cypress open
-_Nessa etapa tive dificuldade com a configuração de inicialização do Cypress, que faz uma verificação no primeiro uso e apresentava o erro "Cypress verification timed out after 30000 milliseconds". Encontrei o link a seguir no próprio fórum da plataforma EBAC como resposta a um dos alunos que teve a mesma dificuldade e consegui resolver:_
+_Nessa etapa tive dificuldade com a configuração de inicialização do Cypress, que faz uma verificação no primeiro uso e apresentava o erro **"Cypress verification timed out after 30000 milliseconds"**. Encontrei o link a seguir no próprio fórum da plataforma EBAC como resposta a um dos alunos que teve a mesma dificuldade e consegui resolver:_
 <https://bobbyhadz.com/blog/cypress-verification-timed-out>
 
 	* No dash do Cypress: Teste E2E, Electron

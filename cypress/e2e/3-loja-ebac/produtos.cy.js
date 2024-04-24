@@ -38,8 +38,15 @@ describe('funcionalidade: Produtos', () => {
         cy.get('.product_title').should('contain', produto)
     });
 
-    it.only('Deve visitar a página do produto pela url- Page Objects', () => {
+    it('Deve visitar a página do produto pela url- Page Objects', () => {
         produtosPage.visitarProduto('Abominable Hoodie')
         cy.get('.product_title').should('contain', 'Abominable Hoodie')
+    });
+
+    it.only('Deve adicionar produto ao carrinho - Page Objects', () => {
+        let qtd = 5
+        produtosPage.buscarProduto('Abominable Hoodie')
+        produtosPage.addProdutoCarrinho('M', 'Red', qtd)
+        cy.get('.woocommerce-message').should('contain', qtd + ' × “Abominable Hoodie” foram adicionados no seu carrinho')
     });
 });
