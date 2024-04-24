@@ -8,7 +8,7 @@
 
 #### Overview sobre a ferramenta:
 
-	* Documentação
+	* [Documentação](https://www.cypress.io/)
 	* Suporte a multibrowsers
     * Fácil depuração 
 	* Tipos de teste: unidade, componentes e UI
@@ -19,9 +19,9 @@
 	* Preparar IDE: Visual Studio Code com os plugins Cypress Snippets e ES6 Mocha Snippets
 	* Criar repositório no Github adicionando o arquivo .gitignore com formatação Node
 	* Criar repositório local e clonar o repositório do Github nele
-	* Comando npm init -y para criar o arquivo package.jason
-	* Comando npm install cypress@13.6.0
-	* Comando npx cypress open
+	* Comando _npm init -y_ para criar o arquivo package.jason
+	* Comando _npm install cypress@13.6.0_
+	* Comando _npx cypress open_
 _Nessa etapa tive dificuldade com a configuração de inicialização do Cypress, que faz uma verificação no primeiro uso e apresentava o erro **"Cypress verification timed out after 30000 milliseconds"**. Encontrei o link a seguir no próprio fórum da plataforma EBAC como resposta a um dos alunos que teve a mesma dificuldade e consegui resolver:_
 <https://bobbyhadz.com/blog/cypress-verification-timed-out>
 
@@ -31,7 +31,7 @@ _Nessa etapa tive dificuldade com a configuração de inicialização do Cypress
 
 #### Primeiro teste automatizado no [e-commerce de teste da EBAC](http://lojaebac.ebaconline.art.br/)
 
-Cenário de teste positivo: login com massa de dados fixa
+*Cenário de teste positivo: login com massa de dados fixa*
 
 ##### Estrutura de um teste automatizado
 
@@ -43,4 +43,14 @@ Cenário de teste positivo: login com massa de dados fixa
 
 	* Conhecendo snippets e auto complete
 	* Cenários de teste negativos: login com dados inválidos
-	* Rodando um único cenário com it.only
+	* Rodando um único cenário com _it.only_
+
+### Aula 4
+
+#### Massa de dados fake para testes dinâmicos: [biblioteca faker-js](https://www.npmjs.com/package/@faker-js/faker)
+
+	*Instalando a biblioteca*
+
+	* Comando _npm i @faker-js/faker@8.3.1_
+	* ⁠Importando a biblioteca no arquivo abaixo do describe: _import { faker } from '@faker-js/faker';_
+	* ⁠configurando tempo de visualização após inserção de dados aleatórios: _cy.wait(5000)_
