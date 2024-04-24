@@ -1,0 +1,26 @@
+[
+    {
+        "nomeProduto": "Aero Daily Fitness Tee",
+        "tamanho": "XS",
+        "cor": "Brown",
+        "quantidade": 3
+    },
+    {
+        "nomeProduto": "Zoltan Gym Tee",
+        "tamanho": "L",
+        "cor": "Green",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto": "Strike Endurance Tee",
+        "tamanho": "XL",
+        "cor": "Red",
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Geo Insulated Jogging Pant",
+        "tamanho": "36",
+        "cor": "Green",
+        "quantidade": 1
+    }
+]
